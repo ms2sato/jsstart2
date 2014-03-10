@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script>
+		$(function(){
+		});
+		
+		function clickedButton(){
+			if(Math.random() < 0.5){
+				$('#image1').show();
+				$('#image2').hide();
+			}else{
+				$('#image1').hide();
+				$('#image2').show();
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<button onclick="clickedButton()">
+		ガチャを回す
+	</button>
+
+	<img id="image1" 
+		src="images/n.png" style="display:none"/>
+	<img id="image2"
+		src="images/n_plus.png" style="display:none"/>
+	
+</body>
+</html>

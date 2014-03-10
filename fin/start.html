@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script>
+		$(function(){
+		});
+		
+		function clickedButton(){
+			$.ajax({
+				url: 'cards.php',
+				success: function(data){
+					$('#result').attr('src', data.image);
+				}
+			});
+		}
+
+	</script>
+</head>
+<body>
+	<h1>$.ajaxでサーバーとの通信</h1>
+	<button onclick="clickedButton()">
+		ガチャを回す
+	</button>
+	<img id="result" src="">
+</body>
+</html>
